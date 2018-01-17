@@ -33,7 +33,7 @@ describe Knapsack::Config::Env do
       end
 
       context 'when BUILDKITE_PARALLEL_JOB_COUNT has value' do
-        before { stub_const("ENV", { 'BUILDKITE_PARALLEL_JOB_COUNT' => 4 }) }
+        before { stub_const("ENV", { 'BUILDKITE_PARALLEL_JOB_COUNT' => '4' }) }
         it { should eql 4 }
       end
 
@@ -68,7 +68,7 @@ describe Knapsack::Config::Env do
       end
 
       context 'when BUILDKITE_PARALLEL_JOB has value' do
-        before { stub_const("ENV", { 'BUILDKITE_PARALLEL_JOB' => 2 }) }
+        before { stub_const("ENV", { 'BUILDKITE_PARALLEL_JOB' => '2' }) }
         it { should eql 2 }
       end
 
